@@ -1,0 +1,47 @@
+#DAY 1
+add = 11 + 5
+sub =  11 - 5
+mul = 11 * 5
+div = 11 / 5
+power = 10 ** 10
+flr = 10 // 3
+mo = 2 % 17
+print(add,+sub,+mul,+div,+power,+flr,+mo)
+
+number = 5
+number **=3
+print(number)
+
+pasta = 16.68  # penne 16 oz, pack of 12
+sauce = 6.98  #  sauce 24oz
+garlic = 16.78  # 20 pack garlic clove
+seasoning = 15.26   # Italian Seasoning
+bread = 3.00   # Baguette twin pack
+meatballs = 4.39   # 12 oz bag of meatballs
+# subtotal is the sum of all prices before any sales taxes or discounts are added
+subtotal = round((pasta + sauce + garlic + seasoning + bread + meatballs), 2)
+print(subtotal)
+
+#DAY 2 #String
+#INDEXING
+var = "Synchronize" # string assigned to a variable
+print(var[5]) # print index 5 from string
+print('ball'[2]) # Print index directly
+#SLICING
+print("Yellow"[2:3]) #string slicing can be done in 3 types [:3][3:][2:3]
+#CONCATINATING
+print("Priya" + " " + "Yadav")
+concatenated = "A1" + "_" + "Py"
+print(concatenated) # 3 types of concatenating the string,var[index],var[1:3],var[4]
+
+#TYPE() STR() functions
+print(type(var)) # otp -- <class 'str'> we can find type of variable
+var1 = str(3) # by using str we have converted int into string
+print(type(var1)) # type int 3 become string 3
+
+#ESCAPE SEQUENCES \t (Horizontal spc), \n(new line)
+
+flt = str(3.14) + "String is float"
+print(type(flt))
+
+print("*******\n *****\n  ***\n   *") #lower triangle
