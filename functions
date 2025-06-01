@@ -1,0 +1,27 @@
+#Function -- 1. Define 2. name 3. parentheses 4. colon 5. print 6. Parameters
+#without parameters
+def hello_world_printer():
+    print("hello world")
+hello_world_printer() # func call output: hello world
+
+#with parameters
+def name_printer(user_name): #with parameters
+    print(user_name)
+name = input("Please enter your name.") # take input from user
+name_printer(name) #Func call with func name
+
+#Example : volume of rectangular prism
+length = int(input("Enter an integer that represents length in feet."))
+width = int(input("Enter an integer that represents width in feet."))
+height = int(input("Enter an integer that represents height in feet."))
+#function use
+def prism_vol(l, w, h):
+    return l * w * h
+print("The volume of the rectangular prism is " + str(prism_vol(length, width, height)) + " cubic feet.")
+
+#Example 2:
+celsius = int(input("Please enter an integer value for degrees celsius. "))
+def fahrenheit(cel):
+    return round((1.8 * cel + 32), 1)
+print("The Fahrenheit equivalent of " + str(celsius) + " degrees Celsius is " + str(fahrenheit(celsius)) + ".")
+
