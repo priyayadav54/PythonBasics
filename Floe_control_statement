@@ -1,0 +1,57 @@
+
+#Flow Control -- flow charts
+#Comparision operator:6 -- >,<,<=,>=,!=,== -- Boolean value
+# print(3 > 2) # True
+# print(3 > 4) # False
+#Bool()-- true--anything, false-- 0
+#Boolean operators:3 -- and: both true then true ,or: only 1 true then true ,not: !T->F,!F->T(opposite)
+---------------------------------------------------------------------------------------------------------
+#If Statement: 4 things must - 1. if, 2. condition, 3. colon(:), 4. code for execute if condition satisfied
+# else Statement : 3 things must - 1. else, 2. colon(:), 3. code for execution
+#nested if and else statement
+
+# score = int(input("Please enter the student's score. "))
+# if score >= 90:
+#     print("This student's score of " + str(score) + " is an A.")
+# else:
+#     if score >= 80:
+#         print("This student's score of " + str(score) + " is a B.")
+#     else:
+#         if score >= 70:
+#             print("This student's score of " + str(score) + " is a C.")
+#         else:
+#             if score >= 60:
+#                 print("This student's score of " + str(score) + " is a D.")
+#             else:
+#                 print("This student's score of " + str(score) + " is a F.")
+
+-------------------------------------------------------------------------------------------------
+#elif statement
+from random import randint # import module random randint function which can put random integers
+
+one_to_ten = randint(1, 10)
+
+if one_to_ten == 1:
+    print("The roman numeral equivalent of " + str(one_to_ten) + " is I.")
+elif one_to_ten == 2:
+    print("The roman numeral equivalent of " + str(one_to_ten) + " is II.")
+elif one_to_ten == 3:
+    print("The roman numeral equivalent of " + str(one_to_ten) + " is III.")
+elif one_to_ten == 4:
+    print("The roman numeral equivalent of " + str(one_to_ten) + " is IV.")
+elif one_to_ten == 5:
+    print("The roman numeral equivalent of " + str(one_to_ten) + " is V.")
+elif one_to_ten == 6:
+    print("The roman numeral equivalent of " + str(one_to_ten) + " is VI.")
+elif one_to_ten == 7:
+    print("The roman numeral equivalent of " + str(one_to_ten) + " is VII.")
+elif one_to_ten == 8:
+    print("The roman numeral equivalent of " + str(one_to_ten) + " is VIII.")
+elif one_to_ten == 9:
+    print("The roman numeral equivalent of " + str(one_to_ten) + " is IX.")
+else:
+    print("The roman numeral equivalent of " + str(one_to_ten) + " is X.")
+
+#Random output:
+#The roman numeral equivalent of 7 is VII.
+#The roman numeral equivalent of 3 is III.
