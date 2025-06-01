@@ -1,0 +1,23 @@
+#List
+print(list(range(0, 40, 10))) # Start: 0, End: 40, Interval: 10 -- Output: 0,10,20,30
+print(list(range(0, 30, 3))) # Start: 0, End: 30, Interval: 3 -- Output: 0,3,6,9..27
+
+#String Methods
+#Capitalize() Title()
+text = "hello world python program"
+print(text.capitalize())  # Output: "Hello world python program"
+print(text.title()) # Output: Hello World Python Program
+
+#Count()
+text = "banana"
+print(text.count("a")) # Output: 3
+
+#INPUT() 1. string
+name = input("What is your name?")
+quest = input("What is your quest?")
+color = input("What is your favorite color?")
+print("So your name is " + name + ", your quest is " + quest + ", and your favorite color is " + color + ".")
+#output So your name is P, your quest is How r u?, and your favorite color is Red.
+# input int() float()
+use_int = int(input("Please enter an integer."))
+print(use_int + 10) #output:Please enter an integer.20 -- 30
