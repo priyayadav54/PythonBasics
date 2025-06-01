@@ -1,0 +1,25 @@
+#Importing Moduls
+# 1: Generic import
+import random # random Module
+print(random.randint(1, 10)) #random.variable name print random value b/w 1 - 10
+
+# 2: Function Import
+from random import randint # module name: random, Function name: randint
+print(randint(1, 30))
+
+# 3: Universal Import
+from random import *
+print(random()) #random function imported from random module return 0.1 < 1.0
+
+
+from random import randint
+fuel = randint(10, 25)
+miles = randint(200, 400)
+print("The car can travel " + str(miles // fuel) + " miles per gallon.")
+print("The car's fuel tank can hold " + str(fuel) + " gallons.")
+print("The car can travel " + str(miles) + " miles on a full tank.")
+
+#Random output
+# The car can travel 21 miles per gallon.
+# The car's fuel tank can hold 17 gallons.
+# The car can travel 369 miles on a full tank.
