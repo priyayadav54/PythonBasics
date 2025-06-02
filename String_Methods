@@ -1,0 +1,89 @@
+#String Method: are built in function which allow you to perform operations
+_________________________________________________________________________________________________
+#Upper Method
+var = "i am having tea"
+print(var.upper()) # I AM HAVING TEA
+________________________________________________________________________________________________
+#Lower method
+var1 = "I AM HAVING TEA"
+print(var1.lower()) # i am having tea
+________________________________________________________________________________________________
+#is.upper(): return boolean true if string is in uppercase else false
+#is.lower(): return boolean true if string is in Lowercase else false
+_________________________________________________________________________________________________
+#startswith():
+print("This is string".startswith("This"))# True
+________________________________________________________________________________________________
+#enddswith():
+print("This is string".endswith("string")) # True
+________________________________________________________________________________________________
+#.join([]): Join the strings
+print("".join(["One", "Two", "Three"])) #OneTwoThree
+print(" ".join(["One", "Two", "Three"])) #One Two Three
+print(",".join(["One", "Two", "Three"])) #One,Two,Three
+print("..".join(["One", "Two", "Three"])) #One..Two..Three
+__________________________________________________________________________________________________
+#.split()
+print("Apple, Mango, Banana, Orange".split(",")) #['Apple', ' Mango', ' Banana', ' Orange']
+__________________________________________________________________________________________________
+#Excercise
+mixed_case = "A Song of Ice and Fire"
+print(mixed_case.isupper())         #False
+print(mixed_case.islower())         #False
+print(mixed_case.upper())           #A SONG OF ICE AND FIRE
+print(mixed_case.lower())           #a song of ice and fire
+print(mixed_case.istitle())         #False
+title_case = mixed_case.title()
+print(title_case)                   #A song Of Ice And Fire
+print(mixed_case.startswith("A"))   #True
+print(mixed_case.endswith("e"))     #True
+words = mixed_case.split()
+print(words)                        #['A', 'Song', 'of', 'Ice', 'and', 'Fire']
+print("".join(words).isalpha())     #True
+____________________________________________________________________________________________________
+#r.just() and l.just() : right justified and left justified
+print("Hello World".rjust(20))                     #         Hello World-- String char count+space count=20
+print("Hello World".ljust(20)+"left justified")    #Hello World         left justified
+______________________________________________________________________________________________________
+#.center()
+print("Hello World".center(20))                     #    Hello World
+print("Hello World".center(20, ":")) #::::Hello World:::::
+_________________________________________________________________________________________________
+#.strip, .rstrip(), .lstrip() -- Remove Spaces, Characters
+print("blueblueblueyellow".strip("blue"))               #yellow
+_________________________________________________________________________________________________
+#.replace()
+print("Good Morning".replace("Morning", "Evening")) # Good Evening
+_________________________________________________________________________________________________
+#Exercise:
+the_string = "North Dakota"
+print(the_string.rjust(17))                              #     North Dakota
+print(the_string.ljust(17, "*"))         #North Dakota*****
+center_plus = the_string.center(16, "+") #++North Dakota++
+print(center_plus)
+print(the_string.lstrip("North"))                        # Dakota
+print(center_plus.rstrip("+"))                           #++North Dakota
+print(center_plus.strip("+"))                            #North Dakota
+print(the_string.replace("North", "South"))  #South Dakota
+_________________________________________________________________________________________________
+#len(): length function
+print(len("Happy")) #5-- Happy length is 5
+_________________________________________________________________________________________________
+#Excercise
+user_string = input("Please enter a string.")
+reversed = ""
+for item in range(len(user_string) - 1, -1, -1):
+    reversed += user_string[item]
+print(reversed) # Happy --> yppaH
+_________________________________________________________________________________________________
+#.format()
+name=input("Enter your name: ")
+occ=input("Enter your occupation: ")
+age=input("Enter your age: ")
+print("{} works as {}, and age is {}.".format(name, occ, age))
+# this gives output:
+# Enter your name: Anand
+# Enter your occupation: Software engineer
+# Enter your age: 35
+# Anand works as Software engineer, and age is 35.
+_________________________________________________________________________________________________
