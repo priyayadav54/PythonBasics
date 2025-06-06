@@ -1,0 +1,62 @@
+# Tuples: Datatype which contain list of items in ( List of items) --> Immutable datatype: cannot be changed
+# same datatype in onw tuple We can have similar items as well
+# uses: less memory consumption than list Also we can use this to fix the values like date month day etc
+_______________________________________________________________________________________________________________________________________________
+tuple_1 = (1,2,3,4,5)
+tuple_2 = tuple("Elephant")
+print(tuple_1) #(1, 2, 3, 4, 5)
+print(tuple_2) #('E', 'l', 'e', 'p', 'h', 'a', 'n', 't')
+#accessing by index number -- Also we can use slicing in tuples
+print(tuple_2[5]) #a --> hence a is place at index no 5
+print(tuple_1.__sizeof__()) #64
+_______________________________________________________________________________________________________________________________________________
+# # Loops in tuple : For loop and while loop
+# #for loop
+Tuple_loop_countries  = ("India","America","China","Africa","Italy","Romania","France", "Germany")
+for country in Tuple_loop_countries:
+    print(country)
+# # India
+# # America
+# # China
+# # Africa
+# # Italy
+# # Romania
+# # France
+# # Germany
+_______________________________________________________________________________________________________________________________________________
+#while loop
+Tuple_loop_countries  = ("India","America","China","Africa","Italy","Romania","France", "Germany")
+count = 0
+while count < len(Tuple_loop_countries):
+    print(Tuple_loop_countries[count])
+    count += 1 # same output as for loop
+backward = len(Tuple_loop_countries) - 1
+while backward >= 0:
+    print(Tuple_loop_countries[backward])
+    backward -= 1
+#prints backward
+# Germany
+# France
+# Romania
+# Italy
+# Africa
+# China
+# America
+# India
+_______________________________________________________________________________________________________________________________________________
+# Tuple slicing with step
+Tuple_slicing = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+print(Tuple_slicing[::3]) # (1, 4, 7) --> Stride length 3
+print(Tuple_slicing[1::2]) # (2, 4, 6, 8) --> evens only
+print(Tuple_slicing[7::-1]) # (8, 7, 6, 5, 4, 3, 2, 1) --> backward from 8
+print(Tuple_slicing[8::-2]) # (9, 7, 5, 3, 1) --> odds only backward
+_______________________________________________________________________________________________________________________________________________
+#Tuple methods: 1. count() 2. index()
+tuple_nested = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
+print(tuple_nested[2]) #(7, 8, 9)
+print(tuple_nested[2][0]) #7
+_______________________________________________________________________________________________________________________________________________
+#count(): no of times appear
+repeat = (0, 0, 0, 1, 2, 3, 2, 3, 4, 3, 4, 5)
+print(repeat.count(0)) # 3 --> 0 is three time in the tuple
+print(repeat.index(2)) #4 in tuple 2 is place at index no 4
