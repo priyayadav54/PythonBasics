@@ -1,0 +1,139 @@
+# Dictionaries in Python: To create a Dictionary : Dict are unordered can access by same key value pair
+#Methods: .keys(), .values(), .items(), len(), .get(),.fromkeys(), .pop() , .popitem(), .clear(), .copy(), .update()
+______________________________________________________________________________________________________________________________________
+# var = {"Key": "value"} --> Key value pair seperated by colon and space
+# can check by in or not in operator
+Consol = {"o": "One", "t": "Two", "e": "Three"}
+print(Consol["o"]) # One
+print(Consol["t"]) # Two
+______________________________________________________________________________________________________________________________________
+#Excercise
+dictionary = {"a": 1, "b": 2, "c": 3, "d": 4, "e": 5}
+print(dictionary["c"])      # 3
+print("a" in dictionary)    #True
+print("b" not in dictionary)#False
+______________________________________________________________________________________________________________________________________
+#Dictionary Methods
+# .keys(): to get all keys from dict
+birth_years = {"1991": "John", "1992": "Sam", "1993": "Smith", "1994": "Ani", "1995": "Emy"}
+print(birth_years.keys()) # dict_keys(['1991', '1992', '1993', '1994', '1995'])
+for key in birth_years.keys():
+    print(key)
+#1991
+#1992
+#1993
+#1994
+#1995
+______________________________________________________________________________________________________________________________________
+# .value(): is the method which allows you to get all values from dictionary
+print(birth_years.values()) #dict_values(['John', 'Sam', 'Smith', 'Ani', 'Emy'])
+______________________________________________________________________________________________________________________________________
+# .items(): to get both keys and values from the dict
+print(birth_years.items()) #dict_items([('1991', 'John'), ('1992', 'Sam'), ('1993', 'Smith'), ('1994', 'Ani'), ('1995', 'Emy')])
+for key, value in birth_years.items():
+    print(key, value)
+# 1991 John
+# 1992 Sam
+# 1993 Smith
+# 1994 Ani
+# 1995 Emy
+______________________________________________________________________________________________________________________________________
+# len()
+print(len(birth_years)) #5
+______________________________________________________________________________________________________________________________________
+# To check the value by using in and not in operator
+print("Sam" in birth_years.values()) #True
+print("Iky" not in birth_years.values()) #True
+______________________________________________________________________________________________________________________________________
+# .get(): use to get value from dict if not fount return something except error
+print(birth_years.get(1999, "1999 not found")) #1999 not found
+______________________________________________________________________________________________________________________________________
+#Excercise
+famous_songs = {"Queen": "Bohemian Rhapsody",
+                "Bee Gees": "Stayin' Alive",
+                "U2": "One",
+                "Michael Jackson": "Billie Jean",
+                "The Beatles": "Hey Jude",
+                "Bob Dylan": "Like A Rolling Stone"}  # 1 and 2
+print(len(famous_songs))  # 3
+for key in famous_songs.keys():  # 4
+    print(key)
+print(famous_songs.values())  # 5
+for key, value in famous_songs.items():  # 6
+    print(key, value)
+print(famous_songs.get("Promise of the Real", "That is not a key that appears in the dictionary."))  # 7
+______________________________________________________________________________________________________________________________________
+#Dictionary Methods 2: .fromkeys(), .pop() , .popitem()
+exfrmkey = {}.fromkeys(["Address"],"India")
+print(exfrmkey) #{'Address': 'India'}
+ex = {}.fromkeys("Add","India")
+print(ex) #{'A': 'India', 'd': 'India'}
+______________________________________________________________________________________________________________________________________
+# .clear(): clear the whole dictionary
+birth_years = {"1991": "John", "1992": "Sam", "1993": "Smith", "1994": "Ani", "1995": "Emy"}
+print(birth_years) # {'1991': 'John', '1992': 'Sam', '1993': 'Smith', '1994': 'Ani', '1995': 'Emy'}
+birth_years.clear() # cleared
+print(birth_years)  # {}
+______________________________________________________________________________________________________________________________________
+# .update(): update override the value value where dictionary being modified
+name = {"sam": "Samuel"}
+print(name) #{'sam': 'Samuel'}
+birth_years.update(name)
+print(birth_years) #{'1991': 'John', '1992': 'Sam', '1993': 'Smith', '1994': 'Ani', '1995': 'Emy', 'sam': 'Samuel'}
+______________________________________________________________________________________________________________________________________
+# .setdefault()
+birth_years = {"1991": "John", "1992": "Sam", "1993": "Smith", "1994": "Ani", "1995": "Emy"}
+# if "UV" not in birth_years:
+#     birth_years["UV"] = "1996"
+# print(birth_years) #{'1991': 'John', '1992': 'Sam', '1993': 'Smith', '1994': 'Ani', '1995': 'Emy', 'UV': '1996'}
+birth_years.setdefault("1996", "UV")
+print(birth_years) #{'1991': 'John', '1992': 'Sam', '1993': 'Smith', '1994': 'Ani', '1995': 'Emy', '1996': 'UV'}
+# value has been added to the dictionary: if the value not found in the dict
+# value will remain unchange if setdefault method called and the key value already exist in the dict.
+______________________________________________________________________________________________________________________________________
+# .dict(): gives alternate way to create dictionary in python
+empty = dict()
+print(empty) #{} --> empty dictionary
+give_values = dict(a=1,b=2,c=3,d=4,e=5)
+print(give_values) #{'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5} --> Dictionary created it is Case Sensitive
+______________________________________________________________________________________________________________________________________
+#Excercise
+internet_celebrities = {"DrDisrespect": "YouTube", "ZLaner": "Facebook", "Ninja": "Mixer"}
+another_one = {"shroud": "Twitch"}
+internet_celebrities.update(another_one)  # 2
+gamers = internet_celebrities.copy()  # 3
+internet_celebrities.clear()  # 4
+print(internet_celebrities)  # {}
+print(gamers)  # {'DrDisrespect': 'YouTube', 'ZLaner': 'Facebook', 'Ninja': 'Mixer', 'shroud': 'Twitch'}
+______________________________________________________________________________________________________________________________________
+#Excercise
+for key, value in {}.fromkeys("bcdfghjklmnpqrstvwxyz", "consonant").items():
+    print(key, value)
+fast_food_items = {"McDonald's": "Big Mac", "Burger King": "Whopper", "Chick-fil-A": "Original Chicken Sandwich"}
+print(fast_food_items.pop("McDonald's"))
+fast_food_items.popitem()
+print(fast_food_items)
+# b consonant
+# c consonant
+# d consonant
+# f consonant
+# g consonant
+# h consonant
+# j consonant
+# k consonant
+# l consonant
+# m consonant
+# n consonant
+# p consonant
+# q consonant
+# r consonant
+# s consonant
+# t consonant
+# v consonant
+# w consonant
+# x consonant
+# y consonant
+# z consonant
+# Big Mac
+# {'Burger King': 'Whopper'}
+______________________________________________________________________________________________________________________________________
